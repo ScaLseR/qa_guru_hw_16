@@ -5,10 +5,10 @@ import pytest
 from selene import have, browser
 
 
-@pytest.fixture(params=[(1920, 1080, 'desktop'),
-                        (2880, 1620, 'desktop'),
-                        (828, 1792, 'mobile'),
-                        (750, 1334, 'mobile')])
+@pytest.fixture(params=[(1920, 1080),
+                        (2880, 1620),
+                        (828, 1792),
+                        (750, 1334)])
 def browser_size(request):
     browser.config.window_width = request.param[0]
     browser.config.window_height = request.param[1]
